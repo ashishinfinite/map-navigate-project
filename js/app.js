@@ -30,7 +30,7 @@ var info=[
 
 ]
 var model=function(){
-
+this.top_nav_heading=ko.observable("BART LOCATIONS");
 this.placeArray=ko.observableArray([]);
 
 for (var i=0;i<info.length;i++)	{
@@ -39,13 +39,14 @@ this.placeArray().push(info[i]);
 }
 
 //this function will be used for closing the side-nav
-// this.close=function() {   
+this.close=function() {   
 
-// 	document.getElementById()
-// }
+	document.querySelector(".container").classList.toggle("slides");
+}
  
+
+ // this value will change as input text changes
  this.input_place=ko.observable("");
  
 }
 ko.applyBindings(new model());
-//ko.applyBindings(input,document.getElementById("input"));
