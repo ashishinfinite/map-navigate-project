@@ -1,5 +1,5 @@
 *{
-	/*border:1px red solid;*/
+	
 	color:white;
     box-sizing: border-box;
     font-family: 'Cormorant Garamond', serif;
@@ -23,10 +23,27 @@ html
 .top-nav{
    background-color: black;
    padding:20px;
+   display:flex;
+   max-width: 100%;
+   flex-direction: row;
+   flex-wrap: nowrap;
+  
+   z-index:-1;
+
+
 
 }
-.heading1{
+.hem{
+    cursor:pointer;
+	margin-left:90px;
+}
 
+.hem.slides{
+ 
+ width:0;
+ }
+.heading1{
+margin-left: 40px;
 }
 
 input{
@@ -39,27 +56,40 @@ input{
 	width:100%;
 	height:10%;
 }
-#places {
-	
-	list-style: none;
-	margin:20px;
-	text-align:center;
-	
+
+
+.filter{
+	width:20%;
+	padding: 2px;
+	background-color: blue;
+	text-align: center;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.inp{
+
+	display: flex;
+	flex-direction: row;
+    max-width:100%;
+	margin-top:64px;
+}
+.inp2{
+
+	padding:2px;
+	font-size:1.2em;
 }
 
 .container{
-    top:0;
+    top:0px;
 	position:absolute;
-	border:1px red solid;
+	/*border:1px red solid;*/
  background-color:black;
- opacity:0.9;
 height:100%;
 width:300px;
+opacity: 0.9;
+z-index:-9;
+overflow-x: hidden;
 
-}
-
-#close{
-	cursor: pointer;
 }
 
 .container.slides{
@@ -73,6 +103,19 @@ display: flex;
 flex-direction: column;
 }
 
+#places {
+	
+	list-style: none;
+	padding:5px;
+	text-align:center;
+	cursor:pointer;
+
+}
+
+#places:hover {
+	background-color:#423f3f;
+
+}
 .place-heading{
 	margin:0 auto;
 	width:100%;
@@ -81,7 +124,3 @@ flex-direction: column;
 	clear:both;
 }
 
-#close{
-	float:right;
-	margin:20px 20px;
-}

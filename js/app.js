@@ -45,6 +45,7 @@ this.close=function() {
 }
  
 
+
  // this value will change as input text changes
  this.input_place=ko.observable("");
  

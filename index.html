@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Cat Clicker</title>
 </head>
@@ -10,23 +11,20 @@
 <div class="master">
     <div class="top-nav">
     <div class="heading1" data-bind="text:top_nav_heading"></div>
+    <div class="hem" data-bind="click:close">&#9776</div>
     </div>
 
     <div class="container">
-        <div class="closing">
-            <span id="close"  data-bind="click:close">x</span>
-        </div>
        
-         <div class="place-heading">
-            Select Places
+        <div class="inp"> <input class="inp2" data-bind="textInput:input_place" />
+        <div class="filter">filter</div>
         </div>
-        <div> <input data-bind="textInput:input_place" /></div>
         <!-- NAME:<div class="reflect" data-bind="text:input_place"></div> -->
         <!-- uncomment the above line to see wheter inputting is working  or not -->
         
         
 
-      
+      <!-- ,style:{backgroundColor:'red'} -->
         <div class="list-places" data-bind="foreach:placeArray()" >
 
             <a id="places" data-bind="text:place"></a>
