@@ -1,0 +1,61 @@
+*{
+	/*border:1px red solid;*/
+	color:white;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px
+}
+body,
+html
+{
+	
+	height:100%;
+}
+#close{
+	cursor: pointer;
+}
+input{
+	color:black;
+	width:100%;
+	text-align: center;
+}
+.reflect{
+	color:white;
+	width:100%;
+	height:10%;
+}
+#places {
+	
+	list-style: none;
+	margin:20px;
+	text-align:center;
+	
+}
+
+.container{
+	border:1px red solid;
+ background-color:black;
+ opacity:0.9;
+height:100%;
+width:300px;
+
+}
+
+
+.list-places{
+display: flex;
+flex-direction: column;
+}
+
+.place-heading{
+	margin:0 auto;
+	width:100%;
+	text-align:center;
+	border:1px red solid;
+	clear:both;
+}
+
+#close{
+	float:right;
+	margin:20px 20px;
+}
