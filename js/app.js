@@ -30,7 +30,7 @@ var info=[
 
 ]
 var model=function(){
-this.top_nav_heading=ko.observable("BART LOCATIONS");
+this.top_nav_heading=ko.observable("GUJARAT LOCATIONS");
 this.placeArray=ko.observableArray([]);
 
 for (var i=0;i<info.length;i++)	{
