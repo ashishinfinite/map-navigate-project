@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Location Finder</title>
+      <script src="js/jquery.min.js"></script>
+       <script src="js/app0.js"></script>
+  
 </head>
 <body>
 <div class="master">
@@ -16,23 +19,22 @@
 
     <div class="container">
        
-        <div class="inp"> <input class="inp2" data-bind="textInput:input_place" />
-        <div class="filter">Filter</div>
-        </div>
+        <div class="inp"> <input class="inp2" type="text" placeholder="search for state" data-bind="value:input_place" />
+        <button class="filter" data-bind="click:validation">Filter</div>
+        </button>
         <!-- NAME:<div class="reflect" data-bind="text:input_place"></div> -->
         <!-- uncomment the above line to see wheter inputting is working  or not -->
-        
-        
-
-     
-        <div class="list-places" data-bind="foreach:placeArray()" >
-
-            <a id="places" data-bind="text:place"></a>
-        </div>
+        <div class="list-places" data-bind="foreach:placeArray" >
+            <a id="places" data-bind="text:title,visible:id"></a>
+        </div>    
     </div>
-
+    <div id='map'></div>
     </div>
     
+
+    <!-- loads map -->
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhewl-qltN3dzy0w0HAsZmt4Hn1Hz0rFM&v=3&callback=initMap" onerror="ashish()">
+   </script>
     <script src="js/lib/knockout-3.2.0.js"></script>
     <script src="js/app.js"></script>
 </body>
